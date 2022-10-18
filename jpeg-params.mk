@@ -1,0 +1,6 @@
+WEB_SIZE := 2400
+SMALL_SIZE := 1800
+QUALITY := 99%
+
+WEB_FLAGS := -resize $(WEB_SIZE)x$(WEB_SIZE) -quality $(QUALITY)
+SMALL_FLAGS := -resize $(SMALL_SIZE)x$(SMALL_SIZE) -quality $(QUALITY)

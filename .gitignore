@@ -1,0 +1,14 @@
+# generated Makefile
+pattern_rules.mk
+
+# generated sentinel file
+xcf_export.uptodate
+
+# bullshit MacOS file
+.DS_Store
+
+**/src-pictures
+**/web-pictures
+**/small-pictures
+blog.txt
+blurb.txt

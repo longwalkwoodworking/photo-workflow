@@ -26,7 +26,7 @@ XCF_FILES
 
 (define (export-jpeg xcfPath)
   (let* ((jpgPath (jpeg-path xcfPath))
-         (xcfImage (car (gimp-file-load RUN-NONINTERACTIVE jpgPath jpgPath)))
+         (xcfImage (car (gimp-file-load RUN-NONINTERACTIVE xcfPath xcfPath)))
          (xcfDrawable (car (gimp-image-flatten xcfImage))))
          (display "Exporting ")
          (display xcfPath)

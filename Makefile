@@ -76,7 +76,8 @@ $(XCF_EXPORT_UP_TO_DATE): $(XCF_EXPORT_SCM) $(SRC_XCF) Makefile
 	set -o pipefail
 	m4 -D XCF_FILES="$$(echo $(filter-out Makefile,$(filter-out $<,$?)) \
 		| sed 's/ /\n/g' \
-		| sed 's/^\(.+\)$$/\"\1\"/')" $< \
+		| awk '/.+/ { print "\"" $$0 "\"" }' \
+		)" $< \
 		| tee /dev/fd/2 \
 		| $(GIMP) -i -b -
 	touch $@
